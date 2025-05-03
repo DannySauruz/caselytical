@@ -251,21 +251,25 @@ footer{
 
 @media (max-width: 1090px){
 	#menu-icon{
-		display: block;
+		display: black;
 	}
 	.navbar{
-		position: absolute;
-		top: 80px;
-		right: -100%;
-		background: white;
-		width: 250px;
+		position: none;
+		top: 100%;
+		right: -1%;
+		width: 270px;
+		height: 12vh;
+		background: var(white);
+		display: block;
 		flex-direction: column;
-		align-items: flex-start;
-		padding: 20px;
-		transition: 0.3s ease;
+		justify-content: flex-start;
+		border-radius: 10px;
+		transition: all .50s ease;
 	}
 	.navbar a{
-		margin: 15px 0;
+		display: block;
+		margin: 25px 0;
+		padding: 0px 25px;
 		transition: all .50s ease;
 	}
 	.navbar a:hover{
@@ -276,6 +280,6 @@ footer{
 		color: black;
 	}
 	.navbar.open{
-		right: 0;
+		right: 5%;
 	}
 }
