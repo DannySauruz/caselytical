@@ -1,186 +1,186 @@
 /* Update the root variables and base styles */
 :root {
-	--text-color: #fff;
-	--main-color: #29fd53;
-	--bg-color: #ffffff;
-  }
-  
-  * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: 'Poppins', sans-serif;
-	text-decoration: none;
-	list-style: none;
-  }
-  
-  body {
-	min-height: 100vh;
-	background: var(--bg-color);
-	color: black;
-	display: flex;
-	flex-direction: column;
-  }
-  
-  /* Improved header styles */
+  --text-color: #fff;
+  --main-color: #29fd53;
+  --bg-color: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Improved header styles */
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 1rem 5%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  max-height: 50px;
+  width: auto;
+}
+
+/* Better responsive container */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Improved swiper/slider */
+.swiper {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsive grid for trending designs */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.column {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.column img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.column img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive buttons */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.ip14, .joinus {
+  background-color: black;
+  color: white;
+}
+
+.ip14:hover, .joinus:hover {
+  background-color: #333;
+  color: var(--main-color);
+}
+
+/* Responsive footer */
+footer {
+  background: #111;
+  color: #fff;
+  padding: 2rem 0;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 992px) {
   header {
-	width: 100%;
-	position: sticky;
-	top: 0;
-	z-index: 1000;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background: white;
-	padding: 1rem 5%;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 3%;
   }
   
-  .logo img {
-	max-height: 50px;
-	width: auto;
+  .navbar {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 250px;
+    height: calc(100vh - 70px);
+    background: white;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all 0.5s ease;
   }
   
-  /* Better responsive container */
-  .container {
-	width: 100%;
-	max-width: 1400px;
-	margin: 0 auto;
-	padding: 1rem;
+  .navbar.open {
+    right: 0;
   }
   
-  /* Improved swiper/slider */
+  .navbar a {
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+  }
+  
+  #menu-icon {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .main a {
+    margin-right: 15px;
+    font-size: 0.9rem;
+  }
+  
   .swiper {
-	width: 100%;
-	height: auto;
-	max-height: 80vh;
+    max-height: 60vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo img {
+    max-height: 40px;
   }
   
-  .swiper-slide img {
-	width: 100%;
-	height: auto;
-	object-fit: cover;
+  .main a {
+    margin-right: 10px;
+    font-size: 0.8rem;
   }
   
-  /* Responsive grid for trending designs */
-  .row {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 1rem;
-	margin: 2rem 0;
-  }
-  
-  .column {
-	flex: 1 1 300px;
-	max-width: 400px;
-  }
-  
-  .column img {
-	width: 100%;
-	height: auto;
-	border-radius: 8px;
-	transition: transform 0.3s ease;
-  }
-  
-  .column img:hover {
-	transform: scale(1.03);
-  }
-  
-  /* Responsive buttons */
   .btn {
-	display: inline-block;
-	padding: 0.8rem 1.5rem;
-	border-radius: 25px;
-	font-weight: 500;
-	transition: all 0.3s ease;
-	text-align: center;
-	margin: 1rem 0;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
   }
   
-  .ip14, .joinus {
-	background-color: black;
-	color: white;
+  .swiper {
+    max-height: 50vh;
   }
-  
-  .ip14:hover, .joinus:hover {
-	background-color: #333;
-	color: var(--main-color);
-  }
-  
-  /* Responsive footer */
-  footer {
-	background: #111;
-	color: #fff;
-	padding: 2rem 0;
-	margin-top: auto;
-  }
-  
-  .footer-content {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 1rem;
-  }
-  
-  /* Media queries for responsiveness */
-  @media (max-width: 992px) {
-	header {
-	  padding: 1rem 3%;
-	}
-	
-	.navbar {
-	  position: fixed;
-	  top: 70px;
-	  right: -100%;
-	  width: 250px;
-	  height: calc(100vh - 70px);
-	  background: white;
-	  flex-direction: column;
-	  justify-content: flex-start;
-	  transition: all 0.5s ease;
-	}
-	
-	.navbar.open {
-	  right: 0;
-	}
-	
-	.navbar a {
-	  margin: 1rem 0;
-	  padding: 0.5rem 1rem;
-	}
-	
-	#menu-icon {
-	  display: block;
-	}
-  }
-  
-  @media (max-width: 768px) {
-	.main a {
-	  margin-right: 15px;
-	  font-size: 0.9rem;
-	}
-	
-	.swiper {
-	  max-height: 60vh;
-	}
-  }
-  
-  @media (max-width: 576px) {
-	.logo img {
-	  max-height: 40px;
-	}
-	
-	.main a {
-	  margin-right: 10px;
-	  font-size: 0.8rem;
-	}
-	
-	.btn {
-	  padding: 0.6rem 1.2rem;
-	  font-size: 0.9rem;
-	}
-	
-	.swiper {
-	  max-height: 50vh;
-	}
-  }
+}
