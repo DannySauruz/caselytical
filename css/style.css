@@ -251,7 +251,7 @@ footer{
 
 @media (max-width: 1090px){
 	#menu-icon{
-		display: black;
+		display: block;
 	}
 	.navbar{
 		position: none;
